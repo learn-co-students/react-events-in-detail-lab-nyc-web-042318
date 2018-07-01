@@ -2,12 +2,17 @@ import React from 'react';
 
 class CoordinatesButton extends React.Component {
     handleClick = (event) => {
-        event.persist();
-        this.props.onReceivedCoordinates([event.clientX, event.clientY]);
+        this.props.onReceiveCoordinates([event.clientX, event.clientY]);
     }
+
     render() {
         return (
-            <button onClick={this.handleClick}>Coordinates</button> 
+            <div>
+            <button 
+            onClick={this.handleClick}>
+            Log your X and Y 
+            </button> 
+            </div>
         )
     }
 }
